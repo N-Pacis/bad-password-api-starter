@@ -1,15 +1,16 @@
-
-# Windows
-Thumbs.db
-desktop.ini
-
-# OSX
-.DS_Store
-.Spotlight-V100
-.Trashes
-._*
-
-# Javascript
-node_modules
-.vercel
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# OSX
+.DS_Store
+.Spotlight-V100
+.Trashes
+._*
+
+# Javascript
+node_modules
+.vercel
+config.bat
 .env
