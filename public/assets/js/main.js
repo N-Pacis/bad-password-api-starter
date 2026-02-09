@@ -1,7 +1,7 @@
 // main.js - client-side code to connect to the bad password API
 
 // REFERENCES
-let password = document.querySelector("#password");
+let password = document.getElementById("password");
 let button = document.querySelector("#submit");
 
 // EVENTS
@@ -19,7 +19,13 @@ document.querySelectorAll("input[type=radio]").forEach((ele) => {
 // called from load and user events
 async function updatePassword() {
     // 👉 add code inside this function (from Chapter 9) ...
-
+    let params = [];
+    document.querySelectorAll("input[type=radio]:checked").forEach((ele) => {
+        params.push(ele.value);
+    });
+    let response = await fetch(`/api/custom?params=${params}`);
+    let data = await response.json();
+    password.value = data.message;
 
 
     // 👈
